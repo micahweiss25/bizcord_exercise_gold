@@ -1,0 +1,37 @@
+<div class="h-100 main-window" id="appWindow" hidden>
+	<div class="row h-100">
+		<div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0 h-100">
+
+			<div class="h-100 d-flex flex-column">
+				<div class="w-100 d-flex flex-row justify-content-center align-items-center">
+					<img class="logo" src="/static/logo.svg" />
+					<h1 class="ms-3 mb-0">Bizcord</h1>
+				</div>
+				<p class="text-center text-muted mb-0 mt-1">An NCL Software Development Module Exercise</p>
+				<hr />
+				<!-- <div class="input-group mb-3">
+					<input type="search" class="form-control" placeholder="Invite Code" aria-label="Invite Code"
+						aria-describedby="invite-addon" />
+					<button class="btn btn-secondary" type="button" id="invite-addon">Join</button>
+				</div> -->
+
+				{% include "user_list.html" %}
+			</div>
+
+		</div>
+
+		<div class="col-md-6 col-lg-7 col-xl-8 h-100">
+			<div class="h-100 d-flex flex-column">
+				{% include "message_box.html" %}
+
+				<form id="chatMessageForm" action="javascript:void(0)">
+					<div class="text-muted d-flex justify-content-start align-items-center pe-3 pt-3">
+						<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+							style="width: 40px;" id="chatBoxAvatar">
+						<input type="text" class="form-control form-control-lg" id="chatMessage" placeholder="Type message">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
