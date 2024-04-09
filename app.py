@@ -25,7 +25,12 @@ callsignMap = {
 def index():
     return "<h1>Hello World</h1>"
 
-def get(messageId):
+def get():
+    messageId = request.args.get("messageId")
+    try:
+        uuid.UUID(str(messageId))
+    except ValueError:
+        return 400
     callsign = messageDB[messageId].callsign
     enc_message = messageDB[messageId].message
     dir = callsignMap[callsign]
