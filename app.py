@@ -31,8 +31,8 @@ def get():
         uuid.UUID(str(messageId))
     except ValueError:
         return 400
-    callsign = messageDB[messageId].callsign
-    enc_message = messageDB[messageId].message
+    callsign = messageDB[messageId]["callsign"]
+    enc_message = messageDB[messageId]["message"]
     dir = callsignMap[callsign]
     private_file = dir + 'private'
 
